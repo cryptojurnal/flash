@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300&family=VT323&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-retro: 'VT323', monospace;
+}
+
+@layer utilities {
+  .theme-vt323 {
+    font-family: 'VT323', monospace;
+  }
+}
+
+@keyframes flicker {
+  0% { opacity: 0.012; }
+  25% { opacity: 0.018; }
+  50% { opacity: 0.010; }
+  75% { opacity: 0.022; }
+  100% { opacity: 0.014; }
+}
+
+@keyframes pulse-fast {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Custom Scrollbar for Terminal container */
+.terminal-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.terminal-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.terminal-scrollbar::-webkit-scrollbar-thumb {
+  background: currentColor;
+  opacity: 0.25;
+  border-radius: 3px;
+}
+.terminal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: currentColor;
+  opacity: 0.5;
+}
+
+/* Glowing text effects */
+.glow-emerald {
+  text-shadow: 0 0 4px rgba(16, 185, 129, 0.4);
+}
+.glow-amber {
+  text-shadow: 0 0 4px rgba(245, 158, 11, 0.4);
+}
+.glow-[#88c0d0] {
+  text-shadow: 0 0 4px rgba(136, 192, 208, 0.4);
+}
+.glow-fuchsia {
+  text-shadow: 0 0 4px rgba(217, 70, 239, 0.4);
+}
+.glow-purple {
+  text-shadow: 0 0 4px rgba(147, 51, 234, 0.4);
+}
+.glow-mono {
+  text-shadow: 0 0 3px rgba(28, 28, 26, 0.15);
+}
